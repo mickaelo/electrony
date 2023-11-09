@@ -35,7 +35,9 @@ module.exports = {
           owner: 'mickaelo',
           name: 'electrony'
         },
-        prerelease: true
+        prerelease: false,
+        draft: true,
+        authToken: "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"
       }
     }
   ]
