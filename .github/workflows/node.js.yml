@@ -17,7 +17,7 @@ jobs:
         run: npm install
       - name: publish
         env:
-          GITHUB_TOKEN: "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"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run publish
   build-and-test:
     runs-on: macos-latest
@@ -36,5 +36,5 @@ jobs:
 
       - name: publish app
         env:
-            GITHUB_TOKEN: "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"
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run publish
