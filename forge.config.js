@@ -35,9 +35,7 @@ module.exports = {
           owner: 'mickaelottmann',
           name: 'electrony'
         },
-        prerelease: false,
-        draft: true,
-        authToken: "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"
+        prerelease: true
       }
     }
   ]
