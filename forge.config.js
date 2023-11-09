@@ -34,10 +34,7 @@ module.exports = {
         repository: {
           owner: 'mickaelo',
           name: 'electrony'
-        },
-        prerelease: false,
-        draft: true,
-        authToken: "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"
+        }
       }
     }
   ]
