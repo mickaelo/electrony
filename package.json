@@ -1,0 +1,46 @@
+{
+  "name": "nodenodejs",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "package-mac": "electron-builder --mac --x64",
+    "package-win": "electron-builder --win --x64 && npm run create-dmg",
+    "package-linux": "electron-builder --linux",
+    "create-dmg": "create-dmg 'dist'",
+    "make": "electron-forge make"
+  },
+  "build": {
+    "appId": "com.yourcompany.yourapp",
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "author": "test",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-dmg": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+    "create-dmg": "^6.0.1",
+    "electron": "^27.0.4",
+    "electron-builder": "^24.6.4"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}
