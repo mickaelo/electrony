@@ -37,7 +37,7 @@ module.exports = {
         },
         prerelease: false,
         draft: true,
-        authToken: "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"
+        authToken: "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"
       }
     }
   ]
