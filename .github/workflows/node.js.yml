@@ -22,6 +22,4 @@ jobs:
         run: npm install
 
       - name: publish app
-        env:
-            GITHUB_TOKEN: "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"
         run: npm run publish
