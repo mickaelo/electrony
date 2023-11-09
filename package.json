@@ -8,10 +8,10 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "package-mac": "electron-builder --mac --x64",
-    "package-win": "electron-builder --win --x64 && npm run create-dmg",
+    "package-win": "electron-builder --win --x64",
     "package-linux": "electron-builder --linux",
-    "create-dmg": "create-dmg 'dist'",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "publish": "electron-forge publish"
   },
   "build": {
     "appId": "com.yourcompany.yourapp",
@@ -36,7 +36,7 @@
     "@electron-forge/maker-squirrel": "^6.4.2",
     "@electron-forge/maker-zip": "^6.4.2",
     "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
-    "create-dmg": "^6.0.1",
+    "@electron-forge/publisher-github": "^6.4.2",
     "electron": "^27.0.4",
     "electron-builder": "^24.6.4"
   },
