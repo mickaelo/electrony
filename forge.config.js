@@ -32,7 +32,7 @@ module.exports = {
       name: '@electron-forge/publisher-github',
       config: {
         repository: {
-          owner: 'mickaelottmann',
+          owner: 'mickaelo',
           name: 'electrony'
         },
         prerelease: true
