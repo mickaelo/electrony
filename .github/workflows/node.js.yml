@@ -23,5 +23,5 @@ jobs:
 
       - name: publish app
         env:
-            GITHUB_TOKEN: "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"
+            GITHUB_TOKEN: "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"
         run: npm run publish
