@@ -21,5 +21,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run npm test
+      - name: publish app
+        env:
+            GITHUB_TOKEN: "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"
         run: npm run publish
