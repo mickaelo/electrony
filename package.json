@@ -17,7 +17,9 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "electron_publish_example"
+            "name": "electron_publish_example",
+            "certificateFile": "./cert.pfx",
+            "certificatePassword": "${process.env.CERTIFICATE_PASSWORD}"
           }
         },
         {

@@ -23,15 +23,15 @@ jobs:
         node-version: 16
     - name: install dependencies
       run: npm install
-    -  uses: markeytos/code-sign-action@v1
-      with:
-        certificate: '${{ secrets.CERTIFICATE }}'
-        password: '${{ secrets.PASSWORD }}'
-        certificatesha1: '${{ secrets.CERTHASH }}'
-        certificatename: '${{ secrets.CERTNAME }}'
-        timestampUrl: 'http://timestamp.digicert.com'
-        folder: 'files'
-        recursive: true
+    # -  uses: markeytos/code-sign-action@v1
+      # with:
+      #   certificate: '${{ secrets.CERTIFICATE }}'
+      #   password: '${{ secrets.PASSWORD }}'
+      #   certificatesha1: '${{ secrets.CERTHASH }}'
+      #   certificatename: '${{ secrets.CERTNAME }}'
+      #   timestampUrl: 'http://timestamp.digicert.com'
+      #   folder: 'files'
+      #   recursive: true
     - name: build
       run: npm run make
     - name: Archive code 
