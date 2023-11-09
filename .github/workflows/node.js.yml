@@ -7,6 +7,7 @@ on:
 
 jobs:
   publish_on_linux:
+      permissions: write-all
       runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@v2       
@@ -21,7 +22,7 @@ jobs:
         run: npm run publish
   build-and-test:
     runs-on: macos-latest
-
+    permissions: write-all
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
