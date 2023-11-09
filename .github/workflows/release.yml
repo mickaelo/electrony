@@ -2,8 +2,8 @@ name: Build and Test on macOS
 
 on:
   push:
-    branches:
-      - main
+    tags:
+        - 'v*'
 
 jobs:
   publish_on_linux:
