@@ -6,22 +6,44 @@ on:
       - main
 
 jobs:
-  build-and-test:
-    runs-on: macos-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+  publish_on_linux:
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2       
+      - uses: actions/setup-node@master
         with:
-          node-version: '16'
-
-      - name: Install dependencies
+          node-version: 16
+      - name: install dependencies
         run: npm install
-
-      - name: publish app
+      - name: publish
         env:
-            GITHUB_TOKEN: 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
+          GITHUB_TOKEN: "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"
+        run: npm run publish
+
+    publish_on_mac:
+      runs-on: macos-latest
+      steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@master
+        with:
+          node-version: 16
+      - name: install dependencies
+        run: npm install
+      - name: publish
+        env:
+          GITHUB_TOKEN: "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"
+        run: npm run publish
+
+    publish_on_win:
+      runs-on: windows-latest
+      steps:
+      - uses: actions/checkout@v2       
+      - uses: actions/setup-node@master
+        with:
+          node-version: 16
+      - name: install dependencies
+        run: npm install
+      - name: publish
+        env:
+          GITHUB_TOKEN: "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"
         run: npm run publish
