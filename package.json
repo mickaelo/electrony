@@ -7,11 +7,23 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "package-mac": "electron-builder --mac --x64",
-    "package-win": "electron-builder --win --x64",
-    "package-linux": "electron-builder --linux",
     "make": "electron-forge make",
     "publish": "electron-forge publish"
+  },
+  "config": {
+    "forge": {
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "mickaelo",
+              "name": "electrony"
+            }
+          }
+        }
+      ]
+    }
   },
   "build": {
     "appId": "com.yourcompany.yourapp",
